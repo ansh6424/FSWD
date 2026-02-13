@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register • TechnoVortex 2026</title>
+  <meta name="description" content="Register for TechnoVortex 2026 - Biggest inter-college tech fest"/>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #7c3aed;
+      --primary-dark: #6d28d9;
+      --accent: #ec4899;
+    }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #0f001a;
+    }
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+    }
+    .glow-purple {
+      box-shadow: 0 0 35px rgba(124, 58, 237, 0.35);
+    }
+  </style>
+</head>
+<body class="text-gray-100 min-h-screen bg-gradient-to-b from-gray-950 via-indigo-950 to-purple-950">
+
+  <!-- Back to home link -->
+  <a href="index.html" 
+     class="fixed top-6 left-6 z-50 px-5 py-2.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-sm font-medium hover:bg-white/20 transition">
+    ← Back to Home
+  </a>
+
+  <main class="container mx-auto px-6 py-16 md:py-24 lg:py-32 max-w-3xl">
+
+    <div class="text-center mb-16">
+      <div class="inline-block mb-6 px-6 py-2.5 bg-white/10 backdrop-blur-md rounded-full border border-purple-500/30 text-sm font-medium tracking-wider">
+        28–30 March 2026
+      </div>
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight mb-5">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
+          REGISTER NOW
+        </span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 font-light">
+        Join the Vortex • Secure your spot before registrations close
+      </p>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="bg-gray-900/60 backdrop-blur-lg border border-purple-900/50 rounded-2xl p-8 md:p-12 glow-purple">
+      
+      <form id="registration-form" class="space-y-7">
+
+        <!-- Team / Individual -->
+        <div>
+          <label class="block text-lg font-medium mb-3">Participation Type</label>
+          <div class="grid grid-cols-2 gap-4">
+            <label class="flex items-center justify-center p-4 bg-white/5 rounded-xl border border-purple-800/40 cursor-pointer hover:border-purple-500/60 transition has-[:checked]:border-pink-500 has-[:checked]:bg-pink-950/20">
+              <input type="radio" name="type" value="individual" class="sr-only" checked>
+              <span class="text-lg">Individual</span>
+            </label>
+            <label class="flex items-center justify-center p-4 bg-white/5 rounded-xl border border-purple-800/40 cursor-pointer hover:border-purple-500/60 transition has-[:checked]:border-pink-500 has-[:checked]:bg-pink-950/20">
+              <input type="radio" name="type" value="team" class="sr-only">
+              <span class="text-lg">Team</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Name -->
+        <div>
+          <label for="name" class="block text-lg font-medium mb-2">Full Name *</label>
+          <input type="text" id="name" name="name" required
+                 class="w-full px-5 py-4 bg-gray-950/60 border border-purple-900/50 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 text-lg placeholder-gray-500"
+                 placeholder="Enter your full name">
+        </div>
+
+        <!-- College -->
+        <div>
+          <label for="college" class="block text-lg font-medium mb-2">College / University *</label>
+          <input type="text" id="college" name="college" required
+                 class="w-full px-5 py-4 bg-gray-950/60 border border-purple-900/50 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 text-lg placeholder-gray-500"
+                 placeholder="e.g. IIT Bombay, MIT Manipal, ...">
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-lg font-medium mb-2">Email Address *</label>
+          <input type="email" id="email" name="email" required
+                 class="w-full px-5 py-4 bg-gray-950/60 border border-purple-900/50 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 text-lg placeholder-gray-500"
+                 placeholder="your.email@college.edu">
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label for="phone" class="block text-lg font-medium mb-2">Phone Number (WhatsApp preferred) *</label>
+          <input type="tel" id="phone" name="phone" required
+                 class="w-full px-5 py-4 bg-gray-950/60 border border-purple-900/50 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 text-lg placeholder-gray-500"
+                 placeholder="+91 98765 43210">
+        </div>
+
+        <!-- Team Details (hidden by default) -->
+        <div id="team-fields" class="space-y-7 hidden">
+          <div>
+            <label for="teamName" class="block text-lg font-medium mb-2">Team Name *</label>
+            <input type="text" id="teamName" name="teamName"
+                   class="w-full px-5 py-4 bg-gray-950/60 border border-purple-900/50 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 text-lg placeholder-gray-500"
+                   placeholder="e.g. CodeBreakers, RoboNinjas">
+          </div>
+          <div>
+            <label for="teamSize" class="block text-lg font-medium mb-2">Team Size</label>
+            <select id="teamSize" name="teamSize"
+                    class="w-full px-5 py-4 bg-gray-950/60 border border-purple-900/50 rounded-xl focus:outline-none focus:border-purple-500 text-lg">
+              <option value="2">2 members</option>
+              <option value="3" selected>3 members</option>
+              <option value="4">4 members</option>
+              <option value="5">5 members</option>
+            </select>
+          </div>
+          <div>
+            <label for="teamMembers" class="block text-lg font-medium mb-2">Other Team Member Names</label>
+            <textarea id="teamMembers" name="teamMembers" rows="3"
+                      class="w-full px-5 py-4 bg-gray-950/60 border border-purple-900/50 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 text-lg placeholder-gray-500"
+                      placeholder="Name 1, Name 2, Name 3..."></textarea>
+          </div>
+        </div>
+
+        <!-- Events interested in (optional) -->
+        <div>
+          <label class="block text-lg font-medium mb-3">Events you're interested in (select all that apply)</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <label class="flex items-center space-x-3">
+              <input type="checkbox" name="events" value="RoboWars" class="w-5 h-5 accent-pink-600">
+              <span>RoboWars / Line Follower</span>
+            </label>
+            <label class="flex items-center space-x-3">
+              <input type="checkbox" name="events" value="Hackathon" class="w-5 h-5 accent-pink-600">
+              <span>36-hour Hackathon</span>
+            </label>
+            <label class="flex items-center space-x-3">
+              <input type="checkbox" name="events" value="Coding" class="w-5 h-5 accent-pink-600">
+              <span>Coding Competition</span>
+            </label>
+            <label class="flex items-center space-x-3">
+              <input type="checkbox" name="events" value="Drone" class="w-5 h-5 accent-pink-600">
+              <span>Drone Racing</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="pt-6">
+          <button type="submit"
+                  class="w-full py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-xl text-2xl font-bold shadow-2xl shadow-purple-900/50 transform transition-all hover:scale-[1.02] active:scale-95">
+            Submit Registration →
+          </button>
+        </div>
+
+        <p class="text-center text-gray-400 text-sm pt-4">
+          By registering you agree to the <a href="#" class="text-purple-400 hover:underline">Terms & Conditions</a>
+        </p>
+      </form>
+
+    </div>
+
+    <div class="text-center mt-12 text-gray-400">
+      <p>Questions? Mail us at <a href="mailto:technovortex@silveroakuni.edu" class="text-purple-400 hover:underline">technovortex@yourcollege.edu</a></p>
+    </div>
+
+  </main>
+
+  <footer class="bg-black/80 border-t border-purple-900/30 py-10 text-center text-gray-500 mt-20">
+    <p>© 2026 TechnoVortex • Organized by [Silver oak University ] Tech Society</p>
+  </footer>
+
+  <!-- Simple JS for team fields toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const typeRadios = document.querySelectorAll('input[name="type"]');
+      const teamFields = document.getElementById('team-fields');
+
+      typeRadios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          if (radio.value === 'team') {
+            teamFields.classList.remove('hidden');
+          } else {
+            teamFields.classList.add('hidden');
+          }
+        });
+      });
+
+      // Optional: form submit preview (replace with real backend later)
+      document.getElementById('registration-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert("Registration submitted! (This is a demo — connect to backend/Google Form next)");
+        // window.location.href = "thank-you.html";  // redirect after success
+      });
+    });
+  </script>
+
+</body>
+</html>
